@@ -127,3 +127,9 @@ winingCombination[HHT]=$((hht*100/n))
 winingCombination[TTT]=$((ttt*100/n))
 winingCombination[HTT]=$((htt*100/n))
 winingCombination[THT]=$((tht*100/n))
+
+echo ${winingCombination[@]}
+for k in "${!winingCombination[@]}"
+do
+    echo $k ' - ' ${winingCombination["$k"]}
+done | sort -rn -k3
